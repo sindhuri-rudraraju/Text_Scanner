@@ -1,0 +1,47 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Give image to scan</title> 
+</head>
+<style>
+    form {
+  text-align: center;
+    }
+    table{
+    width:100%;}
+    h1 {text-align: center;}
+    h4 {text-align: center;}
+    .button2 {background-color: #ec584d;}
+
+    .button1 {background-color: #ca56e7;}
+
+</style> 
+<body style="background-color:rgb(202, 126, 74);"> 
+    <table style="width:100%">
+        <tr>
+          <h1 style="color:rgb(193, 193, 224);">Welcome to my text scanner</h1>
+        </tr>
+    </table>
+    <h4 style="color:blue;">Scan your image</h4>
+    <tr>
+    <form method = "post" enctype="multipart/form-data"> 
+        {% csrf_token %} 
+        {{ form.as_p }}
+        <button class="button1" type="submit" value="Scan" name="_scan">Upload your image</button> 
+    </form>
+    <br><br><br>
+    <h4 style="color:blue;">Get all scans</h4>
+    <form method = "post" > 
+        {% csrf_token %} 
+        <button class="button1" type="submit" value="Get_scans" name="_getscans">Get scans</button> 
+    </form>
+    <br><br><br>
+    <h4 style="color:blue;">Delete all scans</h4>
+    <form method = "post" > 
+        {% csrf_token %} 
+        <button class="button2" type="submit" value="Delete_scans" name="_delscans">Delete all scans</button> 
+    </form> 
+</body> 
+</html> 

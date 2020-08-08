@@ -1,0 +1,32 @@
+
+<!DOCTYPE html> 
+<html lang="en"> 
+<style>
+    img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        }
+    
+    div.justified {
+        display: flex;
+        justify-content: center;
+    }
+    h2 {text-align: center;}
+
+</style>
+<head> 
+    <meta charset="UTF-8"> 
+    <title>your given image</title> 
+</head> 
+<body style="background-color:rgb(16, 192, 169);">
+    <h2 style="color:rgb(34, 41, 5);">Image you have given</h2> 
+    <img src="{{ image.input_Image.url }}"  style="width: 50%" /> 
+    <h2 style="color:rgb(34,41,5);">Text scanned</h2>
+    <div class="justified">
+        <textarea  rows="9" cols="100">
+            {{ image.image_Text }} 
+            </textarea>
+    </div>
+</body> 
+</html> 
